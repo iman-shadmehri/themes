@@ -1,0 +1,253 @@
+/* Slider */
+.slick-slider
+{
+    direction: ltr;
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: left;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.feature-post .slick-dots {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 30px 0 40px;
+  margin: 0;
+  height: 12px;
+  z-index: 1;
+}
+.feature-post .slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 12px;
+  margin: 0 2px;
+
+}
+
+.feature-post .slick-dots li button {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999px;
+  outline: none;
+}
+.feature-post .slick-dots li.slick-active button::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #aaa;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+.feature-post-control {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  text-align: center;
+  z-index: 2;
+}
+.feature-post-control ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.feature-post-control ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.feature-post-control ul li a {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 18px;
+}
+.feature-post-control ul li.sl-prev {
+  margin-left: -180px;
+}
+.most-popular-posts .slick-prev {
+  position: absolute;
+  left: -60px;
+  top: 35%;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.most-popular-posts .slick-prev:before {
+  content: "\f060";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  color: #aaa;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #bbb;
+  line-height: 35px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.most-popular-posts .slick-next {
+  position: absolute;
+  right: -60px;
+  top: 35%;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.most-popular-posts .slick-next:before {
+  content: "\f061";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  right: 0;
+  color: #aaa;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #bbb;
+  line-height: 35px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+.most-popular-posts .slick-next:hover:before, .most-popular-posts .slick-prev:hover:before {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+
+}
